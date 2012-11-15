@@ -6,6 +6,8 @@
     <uses-sdk
         android:minSdkVersion="8"
         android:targetSdkVersion="15" />
+    <uses-permission android:name="android.permission.VIBRATE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
 
     <application
         android:icon="@drawable/ic_launcher"
@@ -13,7 +15,7 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".BallActivity"
-            android:label="@string/title_activity_ball" >
+            android:label="@string/title_activity_ball" android:theme="@android:style/Theme.NoTitleBar.Fullscreen" android:screenOrientation="landscape">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
