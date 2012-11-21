@@ -9,11 +9,44 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.os.PowerManager;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
+import android.view.KeyEvent;
 import android.view.Menu;
 import android.widget.TextView;
 
 public class BallActivity extends Activity implements SensorEventListener{
+
+	@Override
+	public boolean onKeyDown(int keyCode, KeyEvent event) {
+		// TODO 自動生成されたメソッド・スタブ
+		if(keyCode == KeyEvent.KEYCODE_BACK){
+			AlertDialog.Builder ab = new AlertDialog.Builder(this);
+			ab.setMessage(R.string.message_exit);
+			ab.setPositiveButton(R.string.label_yes, new DialogInterface.OnClickListener() {
+				
+				@Override
+				public void onClick(DialogInterface arg0, int arg1) {
+					// TODO 自動生成されたメソッド・スタブ
+					finish();
+					
+				}
+			});
+			ab.setNegativeButton(R.string.label_no, new DialogInterface.OnClickListener() {
+				
+				@Override
+				public void onClick(DialogInterface dialog, int which) {
+					// TODO 自動生成されたメソッド・スタブ
+					;
+				}
+			});
+			ab.show();
+			return true;
+		}
+		
+		return super.onKeyDown(keyCode, event);
+	}
 
 	public static Float acceler_y,acceler_x;
 	private SensorManager sensorMasnager;

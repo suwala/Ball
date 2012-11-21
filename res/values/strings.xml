@@ -4,5 +4,12 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_ball">BallActivity</string>
+    <string name="label_score">スコア:</string>
+    <string name="label_hiscore">ハイスコア:</string>
+    <string name="label_timeleft">残り時間:</string>
+    <string name="message_replay">もう一度遊ぶには画面にタッチしてください</string>
+    <string name="message_exit">終了しますか？</string>
+    <string name="label_yes">はい</string>
+    <string name="label_no">いいえ</string>
 
 </resources>
